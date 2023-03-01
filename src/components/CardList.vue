@@ -9,6 +9,10 @@ export default {
     };
   },
 
+  components: {
+    card,
+  },
+
   created() {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0")
@@ -23,14 +27,14 @@ export default {
 };
 </script>
 <template>
-  <!-- <card /> -->
-
   <div class="row row-cols-5">
-    <div class="col text-center" v-for="character in characters">
-      <img :src="character.card_images[0].image_url" alt="" class="img-fluid" />
-      <h5>{{ character.name }}</h5>
-      <p>{{ character.type }}</p>
-    </div>
+    <card
+      class="text-center"
+      v-for="character in characters"
+      :pic="character.card_images[0].image_url"
+      :name="character.name"
+      :type="character.type"
+    />
   </div>
 </template>
 <style></style>

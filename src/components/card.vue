@@ -1,13 +1,17 @@
-<script></script>
+<script>
+export default {
+  props: {
+    pic: String,
+    name: String,
+    type: String,
+  },
+};
+</script>
 <template>
-  <div class="card" style="width: 18rem">
-    <!-- <img src="..." class="card-img-top" alt="..." />
-    <div class="card-body">
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div> -->
+  <div class="card col gx-3">
+    <img :src="pic" alt="" class="img-fluid" />
+    <h5>{{ name }}</h5>
+    <p>{{ type }}</p>
   </div>
 </template>
 <style></style>
