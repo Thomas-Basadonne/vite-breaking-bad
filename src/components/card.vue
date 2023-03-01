@@ -8,9 +8,9 @@ export default {
 };
 </script>
 <template>
-  <div class="card col gx-3">
+  <div class="card col text-bg-warning" style="width: 15rem">
     <img :src="pic" alt="" class="img-fluid" />
-    <h5>{{ name }}</h5>
+    <h5 class="text-light">{{ name }}</h5>
     <p>{{ type }}</p>
   </div>
 </template>
