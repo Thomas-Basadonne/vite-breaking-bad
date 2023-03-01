@@ -1,16 +1,11 @@
-<script>
-export default {
-  data() {},
-  components: { headerApp },
-};
-</script>
+<script></script>
 <template>
   <header class="container">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="./assets/img/logo.png"
+            src="../assets/img/logo.png"
             alt="Logo"
             width="60"
             height=""

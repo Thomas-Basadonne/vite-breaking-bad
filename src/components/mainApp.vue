@@ -6,6 +6,6 @@ export default {
 };
 </script>
 <template>
-  <div></div>
+  <CardList />
 </template>
 <style></style>
