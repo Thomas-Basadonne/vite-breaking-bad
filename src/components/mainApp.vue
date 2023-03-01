@@ -6,6 +6,8 @@ export default {
 };
 </script>
 <template>
-  <CardList />
+  <div class="container">
+    <CardList />
+  </div>
 </template>
 <style></style>
