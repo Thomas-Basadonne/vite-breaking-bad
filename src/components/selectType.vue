@@ -1,5 +1,4 @@
 <script>
-import axios from "axios";
 export default {
   data() {
     return {
@@ -34,7 +33,17 @@ export default {
         "Skill Card",
         "Token",
       ],
+
+      selectedType: "",
     };
+  },
+
+  emits: ["on-select"],
+
+  methods: {
+    selectType() {
+      this.$emit("on-select", this.selectedType);
+    },
   },
 };
 </script>
@@ -45,8 +54,9 @@ export default {
         class="form-select"
         aria-label="Default select example"
         style="width: 20%"
+        v-model="selectedType"
+        @change="selectType"
       >
-        <option selected>Seleziona il Type</option>
         <option v-for="style in cardsStyle">{{ style }}</option>
       </select>
     </div>
